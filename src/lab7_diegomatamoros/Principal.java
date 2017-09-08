@@ -40,11 +40,11 @@ public class Principal extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         persona_nombre = new javax.swing.JTextField();
         persona_id = new javax.swing.JTextField();
-        cb_personaLugar = new javax.swing.JComboBox<>();
         tf_PersonaEdad = new javax.swing.JTextField();
         tf_estatura = new javax.swing.JTextField();
         tf_profesion = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        cb_personaLugar = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -109,16 +109,16 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(jLabel14))
                         .addGroup(jd_personaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jd_personaLayout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(tf_estatura, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jd_personaLayout.createSequentialGroup()
                                 .addGap(34, 34, 34)
                                 .addGroup(jd_personaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(persona_nombre)
+                                    .addComponent(persona_nombre, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
                                     .addComponent(persona_id)
-                                    .addComponent(cb_personaLugar, 0, 122, Short.MAX_VALUE)
                                     .addComponent(tf_PersonaEdad)
-                                    .addComponent(tf_profesion)))
-                            .addGroup(jd_personaLayout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addComponent(tf_estatura, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(tf_profesion)
+                                    .addComponent(cb_personaLugar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(274, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_personaLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -185,8 +185,18 @@ public class Principal extends javax.swing.JFrame {
         });
 
         b_generar.setText("Generar");
+        b_generar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b_generarMouseClicked(evt);
+            }
+        });
 
         b_crearPersona.setText("Crear persona");
+        b_crearPersona.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b_crearPersonaMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -272,6 +282,7 @@ public class Principal extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void persona_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_persona_idActionPerformed
@@ -279,8 +290,8 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_persona_idActionPerformed
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        persona p=new persona(persona_nombre.getText(),persona_id.getText(),(String)cb_personaLugar.getSelectedItem(),tf_PersonaEdad.getText(),tf_estatura.getText(),tf_profesion.getText());
-        administrarPersona ap=new administrarPersona("./persona.cbm");
+        persona p = new persona(persona_nombre.getText(), persona_id.getText(), (String) cb_personaLugar.getText(), tf_PersonaEdad.getText(), tf_estatura.getText(), tf_profesion.getText());
+        administrarPersona ap = new administrarPersona("./persona.cbm");
         ap.cargarArchivo();
         ap.setPersona(p);
         ap.escribirArchivo();
@@ -293,9 +304,34 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void b_crearTablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_crearTablaMouseClicked
-        
-        lugar l=new lugar(tf_nombre.getText(),tf_clima.getText(),tf_extension.getText(),tf_zona.getText(),tf_año.getText(),(Integer)s_habitantes.getValue());
+
+        lugar l = new lugar(tf_nombre.getText(), tf_clima.getText(), tf_extension.getText(), tf_zona.getText(), tf_año.getText(), (Integer) s_habitantes.getValue());
+        administrarLugares al = new administrarLugares("./lugares.cbm");
+        al.cargarArchivo();
+        al.setLugar(l);
+        al.escribirArchivo();
+        JOptionPane.showMessageDialog(this, "se ha creado");
+        tf_nombre.setText("");
+        tf_clima.setText("");
+        tf_extension.setText("");
+        tf_zona.setText("");
+        tf_año.setText("");
     }//GEN-LAST:event_b_crearTablaMouseClicked
+
+    private void b_crearPersonaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_crearPersonaMouseClicked
+        jd_persona.setModal(true);
+        jd_persona.pack();
+        jd_persona.setLocationRelativeTo(this);
+        jd_persona.setVisible(true);
+    }//GEN-LAST:event_b_crearPersonaMouseClicked
+
+    private void b_generarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_generarMouseClicked
+        tabla tabla=new tabla();
+        
+        
+        tabla.setVisible(true);
+        
+    }//GEN-LAST:event_b_generarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -336,7 +372,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton b_crearPersona;
     private javax.swing.JButton b_crearTabla;
     private javax.swing.JButton b_generar;
-    private javax.swing.JComboBox<String> cb_personaLugar;
+    private javax.swing.JTextField cb_personaLugar;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

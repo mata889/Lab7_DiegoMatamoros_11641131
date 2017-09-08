@@ -26,19 +26,19 @@
                               <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="persona_nombre" max="32767" attributes="0"/>
-                                      <Component id="persona_id" max="32767" attributes="0"/>
-                                      <Component id="cb_personaLugar" pref="122" max="32767" attributes="0"/>
-                                      <Component id="tf_PersonaEdad" max="32767" attributes="0"/>
-                                      <Component id="tf_profesion" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                                   <Component id="tf_estatura" min="-2" pref="122" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="persona_nombre" pref="122" max="32767" attributes="0"/>
+                                      <Component id="persona_id" max="32767" attributes="0"/>
+                                      <Component id="tf_PersonaEdad" max="32767" attributes="0"/>
+                                      <Component id="tf_profesion" max="32767" attributes="0"/>
+                                      <Component id="cb_personaLugar" alignment="0" min="-2" pref="112" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
@@ -137,16 +137,6 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="persona_idActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cb_personaLugar">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="0"/>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
-        </Component>
         <Component class="javax.swing.JTextField" name="tf_PersonaEdad">
         </Component>
         <Component class="javax.swing.JTextField" name="tf_estatura">
@@ -161,6 +151,8 @@
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton2MouseClicked"/>
           </Events>
         </Component>
+        <Component class="javax.swing.JTextField" name="cb_personaLugar">
+        </Component>
       </SubComponents>
     </Container>
   </NonVisualComponents>
@@ -169,7 +161,7 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -352,11 +344,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Generar"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="b_generarMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="b_crearPersona">
       <Properties>
         <Property name="text" type="java.lang.String" value="Crear persona"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="b_crearPersonaMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="tf_zona">
     </Component>

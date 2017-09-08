@@ -31,7 +31,7 @@ public class tabla extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jt_personas = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         labelDeLaTabla.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
 
@@ -95,6 +95,7 @@ public class tabla extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
