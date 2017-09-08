@@ -59,7 +59,6 @@ public class Principal extends javax.swing.JFrame {
         s_habitantes = new javax.swing.JSpinner();
         tf_año = new javax.swing.JTextField();
         b_crearTabla = new javax.swing.JButton();
-        b_generar = new javax.swing.JButton();
         b_crearPersona = new javax.swing.JButton();
         tf_zona = new javax.swing.JTextField();
 
@@ -185,13 +184,6 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        b_generar.setText("Generar");
-        b_generar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                b_generarMouseClicked(evt);
-            }
-        });
-
         b_crearPersona.setText("Crear persona");
         b_crearPersona.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -208,44 +200,41 @@ public class Principal extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(b_crearPersona))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(60, 60, 60)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel6)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
-                                        .addComponent(tf_año, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(147, 147, 147))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel4)
-                                            .addComponent(jLabel3)
-                                            .addComponent(jLabel2)
-                                            .addComponent(jLabel1)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel5)
-                                                .addGap(35, 35, 35)
-                                                .addComponent(tf_zona, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                                .addComponent(tf_año, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(218, 218, 218))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addGap(200, 200, 200)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(tf_extension, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel7)
-                                                .addComponent(s_habitantes, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel1)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addContainerGap()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(tf_clima, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(tf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(b_crearTabla))))
-                                .addGap(18, 18, Short.MAX_VALUE)))
-                        .addComponent(b_generar)))
+                                        .addComponent(jLabel5)
+                                        .addGap(35, 35, 35)
+                                        .addComponent(tf_zona, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(200, 200, 200)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tf_extension, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel7)
+                                        .addComponent(s_habitantes, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(tf_clima, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(b_crearTabla))))
+                        .addGap(18, 18, Short.MAX_VALUE)))
                 .addGap(46, 46, 46))
         );
         layout.setVerticalGroup(
@@ -273,12 +262,11 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(tf_zona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(tf_año, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(b_generar))
-                .addGap(26, 26, 26)
+                    .addComponent(tf_año, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
                 .addComponent(b_crearTabla)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addComponent(b_crearPersona)
@@ -305,6 +293,8 @@ public class Principal extends javax.swing.JFrame {
         tf_PersonaEdad.setText("");
         tf_estatura.setText("");
         tf_profesion.setText("");
+        lugar l = new lugar();
+        
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void b_crearTablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_crearTablaMouseClicked
@@ -314,38 +304,21 @@ public class Principal extends javax.swing.JFrame {
         al.cargarArchivo();
         al.setLugar(l);
         al.escribirArchivo();
-        JOptionPane.showMessageDialog(this, "se ha creado");
         
-        
-        
-    }//GEN-LAST:event_b_crearTablaMouseClicked
 
+        l.start();
+
+
+    }//GEN-LAST:event_b_crearTablaMouseClicked
+    public String getNombre() {
+        return tf_nombre.getText();
+    }
     private void b_crearPersonaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_crearPersonaMouseClicked
         jd_persona.setModal(true);
         jd_persona.pack();
         jd_persona.setLocationRelativeTo(this);
         jd_persona.setVisible(true);
     }//GEN-LAST:event_b_crearPersonaMouseClicked
-
-    private void b_generarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b_generarMouseClicked
-        tabla tabla=new tabla();
-        tabla.setVisible(true);
-        
-        tabla.lable_tabla.setText(tf_nombre.getText());
-        administrarPersona ap = new administrarPersona("./persona.cbm");
-        ap.cargarArchivo();
-        
-        DefaultTableModel model = (DefaultTableModel) tabla.jt_personas.getModel();
-        //String nombre,id,lugar,edad,estatura,profesion;
-        for (int i = 0; i < ap.listaPersonas.size(); i++) {
-            if (ap.listaPersonas.get(i).lugar.equals(tf_nombre.getText())) {
-                model.addRow(new Object[]{ap.listaPersonas.get(i).getNombre(),ap.listaPersonas.get(i).getId(),ap.listaPersonas.get(i).getLugar(),
-                    ap.listaPersonas.get(i).getEdad(),ap.listaPersonas.get(i).getEstatura(),ap.listaPersonas.get(i).getProfesion()});
-            }
-        }
-        
-        
-    }//GEN-LAST:event_b_generarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -385,7 +358,6 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton b_crearPersona;
     private javax.swing.JButton b_crearTabla;
-    private javax.swing.JButton b_generar;
     private javax.swing.JTextField cb_personaLugar;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -411,7 +383,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField tf_clima;
     private javax.swing.JTextField tf_estatura;
     private javax.swing.JTextField tf_extension;
-    private javax.swing.JTextField tf_nombre;
+    public javax.swing.JTextField tf_nombre;
     private javax.swing.JTextField tf_profesion;
     private javax.swing.JTextField tf_zona;
     private javax.swing.ButtonGroup zona;
