@@ -27,35 +27,17 @@ public class tabla extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        labelDeLaTabla = new javax.swing.JLabel();
+        lable_tabla = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jt_personas = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        labelDeLaTabla.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        lable_tabla.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
 
         jt_personas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+
             },
             new String [] {
                 "nombre", "Id", "lugar", "edad", "estatura", "profesion"
@@ -69,6 +51,7 @@ public class tabla extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jt_personas.setEnabled(false);
         jScrollPane1.setViewportView(jt_personas);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -81,14 +64,14 @@ public class tabla extends javax.swing.JFrame {
                 .addGap(51, 51, 51))
             .addGroup(layout.createSequentialGroup()
                 .addGap(195, 195, 195)
-                .addComponent(labelDeLaTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lable_tabla, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(31, Short.MAX_VALUE)
-                .addComponent(labelDeLaTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lable_tabla, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -135,7 +118,7 @@ public class tabla extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jt_personas;
-    private javax.swing.JLabel labelDeLaTabla;
+    public javax.swing.JTable jt_personas;
+    public javax.swing.JLabel lable_tabla;
     // End of variables declaration//GEN-END:variables
 }

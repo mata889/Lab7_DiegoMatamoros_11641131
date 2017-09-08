@@ -1,9 +1,12 @@
 
 package lab7_diegomatamoros;
 
+import java.io.Serializable;
 
-public class persona {
+
+public class persona implements Serializable{
     String nombre,id,lugar,edad,estatura,profesion;
+    private static final long SerialVersionUID=777L;
 
     public persona(String nombre, String id, String lugar, String edad, String estatura, String profesion) {
         this.nombre = nombre;

@@ -18,7 +18,8 @@ import java.util.ArrayList;
  * @author Family
  */
 public class administrarPersona {
-     ArrayList<persona> listaPersonas = new ArrayList();
+
+    ArrayList<persona> listaPersonas = new ArrayList();
     File archivo = null;
 
     public administrarPersona(String path) {
