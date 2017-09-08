@@ -1,9 +1,12 @@
 
 package lab7_diegomatamoros;
 
-public class lugar extends Thread {
+import java.io.Serializable;
+
+public class lugar extends Thread implements Serializable {
 String nombre,clima,extension,zona,año;
 int habitantes;
+private static final long SerialVersionUID=777L;
 
     public lugar(String nombre, String clima, String extension, String zona, String año, int habitantes) {
         this.nombre = nombre;
